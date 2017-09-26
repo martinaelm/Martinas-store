@@ -3,19 +3,15 @@ class Product:
 	count = 0
 	tax = 1.25
 
+	def __init__(self, price, count, tax):
+		self.price = price
+		self.count = count
+		self.tax = tax
 
 	def price_with_tax(self):
-		return self.price * self.count * self.tax	
+		return self.price * self.count * self.tax
 
-robot = Product()
-robot.price = 900
-robot.count = 2
-robot.tax = 1.25
+Robot = Product(price = 900, count = 2, tax = 1.25)
+Book = Product(price = 100, count = 1, tax = 1.06)
 
-book = Product()
-book.price = 100
-book.count = 1
-book.tax = 1.06
-
-
-print(robot.price_with_tax() + book.price_with_tax())
+print(Robot.price_with_tax() + Book.price_with_tax())	
